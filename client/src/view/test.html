@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<h2>Horses</h2>
+<ul class="horses">
+    <li *ng-for="#horse of horses" (click)="onSelect(horse)" [ng-class]="getSelectedClass(horse)">
+        <span class="badge">{{horse.id}}</span> {{horse.name}}</a>
+    </li>
+</ul>
+<div *ng-if="selectedHorse">
+    <h2>{{selectedHorse.name}} details!</h2>
+
+    <div><label>id: </label>{{selectedHorse.id}}</div>
+    <div>
+        <label>name: </label>
+        <input [(ng-model)]="selectedHorse.name" placeholder="name"></input>
+    </div>
+</div>
