@@ -1,6 +1,13 @@
-
 .idea
+**/.DS_Store
+**/*.iml
+**/*.pyc
 
 client/node_modules
 client/src/app/app.js
 client/src/app/app.js.map
+
+server/.venv
+server/dist
+server/*.egg-info
+server/**/db.sqlite3
