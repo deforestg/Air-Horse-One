@@ -18,6 +18,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'horseapi.horse'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -30,8 +31,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 )
-
-ROOT_URLCONF = 'horseapi.urls'
 
 TEMPLATES = [
     {
@@ -49,7 +48,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'horseapi.wsgi.application'
+WSGI_APPLICATION = 'base.wsgi.application'
+ROOT_URLCONF = 'base.urls'
+STATIC_URL = '/static/'
 
 DATABASES = {
     'default': {
